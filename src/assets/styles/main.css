@@ -1,0 +1,13 @@
+@import 'base.css';
+@import 'fonts.css';
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+#app {
+    font-weight: normal;
+    color: var(--dark);
+    background-color: var(--white);
+}
