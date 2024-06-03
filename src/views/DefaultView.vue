@@ -7,8 +7,8 @@ import TopHeadSection from '@/components/top-head-section/TopHeadSection.vue';
 <template>
   <div class="space-y-12 mb-10">
     <TopHeadSection />
-    <AboutUsSection />
     <OurServicesSection />
+    <AboutUsSection />
   </div>
 </template>
 

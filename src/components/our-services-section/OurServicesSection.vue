@@ -3,7 +3,7 @@
 
     <SectionHeadingComponent>
       <template #title>
-        Our Services
+        What We Offer
       </template>
     </SectionHeadingComponent>
 

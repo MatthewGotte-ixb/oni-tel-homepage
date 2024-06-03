@@ -17,7 +17,7 @@ import { MapPin } from 'lucide-vue-next'
         <div class="flex flex-col gap-2 max-w-[800px] w-1/2">
           <span class="font-medium text-lg sm:text-2xl text-left tracking-tight italic pl-5">Let’s get you connected</span>
           <div class="flex flex-row gap-2">
-            <Input placeholder="Enter your address" class="w-full rounded-3xl py-6 px-5 text-xl border-[#D67B13]" />
+            <Input placeholder="Enter your address" class="bg-white w-full rounded-3xl py-6 px-5 text-xl border-[#D67B13]" />
             <Button class="rounded-3xl h-full bg-[#D67B13] hover:bg-[#D67B13]/80"><MapPin class="size-4 mr-2" />Check Coverage</Button>
           </div>
         </div>
