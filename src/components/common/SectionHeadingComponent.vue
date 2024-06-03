@@ -7,7 +7,7 @@
     <div class="font-medium text-dark tracking-tight text-2xl sm:text-4xl">
       <slot name="title" />
     </div>
-    <hr class="border-none h-px bg-white-soft">
+    <hr class="border-none h-px bg-secondary">
   </div>
 </template>
 

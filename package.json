@@ -13,14 +13,22 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
+    "@radix-icons/vue": "^1.0.0",
+    "@vueuse/core": "^10.10.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "motion": "^10.17.0",
     "mouse-follower": "^1.1.2",
+    "radix-vue": "^1.8.3",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
     "vue": "^3.4.21",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",
     "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.14.0",
     "@types/three": "^0.164.0",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/eslint-config-prettier": "^9.0.0",
