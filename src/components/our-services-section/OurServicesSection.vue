@@ -3,7 +3,7 @@
 
     <SectionHeadingComponent>
       <template #title>
-        OUR SERVICES
+        Our Services
       </template>
     </SectionHeadingComponent>
 
@@ -26,44 +26,24 @@ import SectionHeadingComponent from '@/components/common/SectionHeadingComponent
 const serviceItems = [
   {
     icon: '/icons/1.svg',
-    title: 'DIGITAL EXPERIENCE DESIGN',
-    content: 'We deliver cutting-edge, and custom-crafted digital experiences tailored to engage your audience'
+    title: 'Unmatched Speed and Reliability',
+    content: 'Our fiber-optic network offers lightning-fast internet speeds and unparalleled reliability, ensuring you stay connected without interruptions.'
   },
   {
     icon: '/icons/2.svg',
-    title: 'ACCELERATED APP DEVELOPMENT',
-    content: 'Rapid development of applications without compromising quality, helping you focus on what matters most'
+    title: 'Cutting-Edge Technology',
+    content: 'We utilize the latest advancements in fiber-optic technology to deliver superior performance and future-proof solutions for all your connectivity needs.'
   },
   {
     icon: '/icons/3.svg',
-    title: 'ARTIFICIAL INTELLIGENCE',
-    content: 'We offer AI and machine learning solutions, from predictive analytics to decision-making tools, tailored to drive operational efficiency'
+    title: 'Exceptional Customer Support',
+    content: 'Our dedicated support team is available 24/7 to assist you with any issues or inquiries, providing personalized and efficient service.'
   },
   {
     icon: '/icons/4.svg',
-    title: 'NATIVE APP DEVELOPMENT',
-    content: 'Superior native Android and iOS apps, designed to fully utilize the platform\'s capabilities and offerings'
+    title: 'Wide Coverage Area',
+    content: 'We provide extensive coverage across urban and rural areas, ensuring high-speed internet access wherever you are.'
   },
-  {
-    icon: '/icons/5.svg',
-    title: 'SYSTEMS INTEGRATION',
-    content: 'Streamlined integrations of disparate systems to improve data flow and functionality, enhancing your decision-making capabilities'
-  },
-  {
-    icon: '/icons/6.svg',
-    title: 'UNIFIED SYSTEMS',
-    content: 'Systems unification to align operations and streamline efficiency, creating a unified view of your organisation'
-  },
-  {
-    icon: '/icons/7.svg',
-    title: 'ENTERPRISE SYSTEM MERGING',
-    content: 'Combining multiple systems into one streamlined, efficient framework that supports your business’s growth and decision making abilities'
-  },
-  {
-    icon: '/icons/8.svg',
-    title: 'CLOUD COMPUTING',
-    content: 'Transition to comprehensive cloud services. Enjoy scalability, flexibility, and cost-efficiency, with security as a priority'
-  }
 ];
 </script>
 

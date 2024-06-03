@@ -49,7 +49,7 @@ watchEffect(() => {
 
         </div>
         <ul class="flex gap-6 items-center">
-          <Button class="rounded-3xl">CONTACT US</Button>
+          <Button class="rounded-3xl  bg-[#D67B13] hover:bg-[#D67B13]/80">Contact Us</Button>
         </ul>
       </nav>
     </div>
