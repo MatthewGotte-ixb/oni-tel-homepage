@@ -9,7 +9,7 @@
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
       <div v-for="item in serviceItems" :key="item.title" class="flex gap-6 lg:gap-10">
-        <img class="h-10 w-auto" :src="item.icon" alt=""/>
+        <img class="mt-4 h-10 w-auto" :src="item.icon" alt=""/>
         <div class="flex flex-col">
           <div class="font-bold tracking-tight text-lg">{{ item.title }}</div>
           <div>{{ item.content }}</div>
