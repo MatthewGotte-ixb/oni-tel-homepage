@@ -8,8 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: "Configure prod - ftp deployment"
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -22,15 +20,36 @@ jobs:
       - name: Install dependencies
         run: npm install
 
+      - name: Set environment variables for build
+        run: |
+          echo "VITE_EMAIL_JS_PUBLIC_KEY=${{ vars.VITE_EMAIL_JS_PUBLIC_KEY }}" >> $GITHUB_ENV
+          echo "VITE_EMAIL_JS_PRIVATE_KEY=${{ secrets.VITE_EMAIL_JS_PRIVATE_KEY }}" >> $GITHUB_ENV
+          echo "VITE_EMAIL_JS_SERVICE_ID=${{ vars.VITE_EMAIL_JS_SERVICE_ID }}" >> $GITHUB_ENV
+          echo "VITE_EMAIL_JS_TEMPLATE_ID=${{ vars.VITE_EMAIL_JS_TEMPLATE_ID }}" >> $GITHUB_ENV
+
+      - name: Check secrets and variables existence
+        run: |
+          echo "FTP_HOST: ${{ vars.FTP_HOST != '' }}"
+          echo "FTP_USERNAME: ${{ vars.FTP_USERNAME != '' }}"
+          echo "FTP_PASSWORD: ${{ secrets.FTP_PASSWORD != '' }}"
+          echo "FTP_REMOTE_PATH: ${{ vars.FTP_REMOTE_PATH != '' }}"
+          echo "VITE_EMAIL_JS_PUBLIC_KEY: ${{ vars.VITE_EMAIL_JS_PUBLIC_KEY != '' }}"
+          echo "VITE_EMAIL_JS_PRIVATE_KEY: ${{ secrets.VITE_EMAIL_JS_PRIVATE_KEY != '' }}"
+          echo "VITE_EMAIL_JS_SERVICE_ID: ${{ vars.VITE_EMAIL_JS_SERVICE_ID != '' }}"
+          echo "VITE_EMAIL_JS_TEMPLATE_ID: ${{ vars.VITE_EMAIL_JS_TEMPLATE_ID != '' }}"
+
       - name: Build the project
         run: npm run build
+
+      - name: Verify dist folder
+        run: ls -la ./dist
 
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
+          server: ${{ vars.FTP_HOST }}
+          username: ${{ vars.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote-dir: ${{ secrets.FTP_REMOTE_PATH }}
-          local-dir: ./dist
+          server-dir: ${{ vars.FTP_REMOTE_PATH }}
+          local-dir: ./dist/
           clean: true
