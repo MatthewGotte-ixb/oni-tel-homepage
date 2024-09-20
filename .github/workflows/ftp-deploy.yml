@@ -8,8 +8,6 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: "Configure prod - ftp deployment"
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
@@ -28,6 +26,9 @@ jobs:
           echo "FTP_USERNAME: ${FTP_USERNAME:+set}"
           echo "FTP_PASSWORD: ${FTP_PASSWORD:+set}"
           echo "FTP_REMOTE_PATH: ${FTP_REMOTE_PATH:+set}"
+          echo "VITE_EMAIL_JS_PUBLIC_KEY: ${VITE_EMAIL_JS_PUBLIC_KEY:+set}"
+          echo "VITE_EMAIL_JS_SERVICE_ID: ${VITE_EMAIL_JS_SERVICE_ID:+set}"
+          echo "VITE_EMAIL_JS_TEMPLATE_ID: ${VITE_EMAIL_JS_TEMPLATE_ID:+set}"
 
       - name: Build the project
         run: npm run build
