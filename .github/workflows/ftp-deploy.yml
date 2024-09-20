@@ -51,5 +51,5 @@ jobs:
           username: ${{ vars.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ vars.FTP_REMOTE_PATH }}
-          local-dir: ./dist
+          local-dir: ./dist/
           clean: true
