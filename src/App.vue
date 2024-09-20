@@ -7,6 +7,7 @@ import Toaster from '@/components/ui/toast/Toaster.vue'
 <template>
 <ComingSoon />
 <Toaster />
+
 <!--<TailwindInd />-->
 </template>
 
