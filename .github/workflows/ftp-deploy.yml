@@ -29,7 +29,7 @@ jobs:
 
       - name: Check secrets and variables existence
         run: |
-          echo "FTP_HOST: ${{ secrets.FTP_HOST != '' }}"
+          echo "FTP_HOST: ${{ vars.FTP_HOST != '' }}"
           echo "FTP_USERNAME: ${{ vars.FTP_USERNAME != '' }}"
           echo "FTP_PASSWORD: ${{ secrets.FTP_PASSWORD != '' }}"
           echo "FTP_REMOTE_PATH: ${{ vars.FTP_REMOTE_PATH != '' }}"
@@ -47,7 +47,7 @@ jobs:
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
-          server: ${{ secrets.FTP_HOST }}
+          server: ${{ vars.FTP_HOST }}
           username: ${{ vars.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           server-dir: ${{ vars.FTP_REMOTE_PATH }}
