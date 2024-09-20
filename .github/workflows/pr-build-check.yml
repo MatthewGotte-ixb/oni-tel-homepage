@@ -3,7 +3,8 @@ name: PR Build Check
 on:
   pull_request:
     branches:
-      - develop
+      - int
+      - uat
       - prod
 
 jobs:
